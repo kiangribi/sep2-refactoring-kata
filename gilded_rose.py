@@ -20,7 +20,7 @@ class GildedRose(object):
                     quality_drain = 3
                 elif item.sell_in <= 10:
                     quality_drain = 2
-            if item.sell_in < 0:
+            if item.sell_in < 0 or "Conjured" in item.name:
                 quality_drain = 2
 
             item.sell_in -= 1
